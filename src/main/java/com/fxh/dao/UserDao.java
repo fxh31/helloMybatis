@@ -19,4 +19,6 @@ public interface UserDao {
     public User login(String name,String password);
 
     public User login2(HashMap<String,Object> map);
+
+    public List<User> findById2(int start,int end);
 }

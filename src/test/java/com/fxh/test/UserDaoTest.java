@@ -93,4 +93,12 @@ public class UserDaoTest {
         User user =userDao.login2(map);
         System.out.println(user);
     }
+
+    @Test
+    public void testfindById2(){
+        List<User> list = userDao.findById2(1, 3);
+        for(User user:list){
+            System.out.println(user);
+        }
+    }
 }
