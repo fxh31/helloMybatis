@@ -20,6 +20,6 @@
         delete from users where id=#{user_id}
     </delete>
     <update id="update" parameterType="User">
-        update users set name=#{name},pasaword=#{password} where id=#{id}
+        update users set name=#{name},password=#{password} where id=#{id}
     </update>
 </mapper>

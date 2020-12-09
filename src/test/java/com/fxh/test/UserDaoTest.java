@@ -65,4 +65,17 @@ public class UserDaoTest {
         boolean result = userDao.save(user);
         System.out.println(result);
     }
+
+    @Test
+    public void testDelete(){
+        boolean result = userDao.deleteById(5);
+        System.out.println(result);
+    }
+
+    @Test
+    public void testUpdate(){
+        User user =new User(1,"bb","3100");
+        boolean result = userDao.update(user);
+        System.out.println(result);
+    }
 }
