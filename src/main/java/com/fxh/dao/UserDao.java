@@ -2,6 +2,7 @@ package com.fxh.dao;
 
 import com.fxh.pojo.User;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface UserDao {
@@ -15,4 +16,7 @@ public interface UserDao {
 
     public boolean update(User user);
 
+    public User login(String name,String password);
+
+    public User login2(HashMap<String,Object> map);
 }

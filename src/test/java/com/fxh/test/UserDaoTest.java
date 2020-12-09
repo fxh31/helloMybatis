@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -77,5 +78,19 @@ public class UserDaoTest {
         User user =new User(1,"bb","3100");
         boolean result = userDao.update(user);
         System.out.println(result);
+    }
+    @Test
+    public void testLogin(){
+        User user = userDao.login("bb", "3100");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testLogin2(){
+        HashMap<String,Object> map =new HashMap<String,Object>();
+        map.put("user_name","bb");
+        map.put("user_password","3100");
+        User user =userDao.login2(map);
+        System.out.println(user);
     }
 }

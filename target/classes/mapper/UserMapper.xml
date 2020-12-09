@@ -22,4 +22,12 @@
     <update id="update" parameterType="User">
         update users set name=#{name},password=#{password} where id=#{id}
     </update>
+
+    <select id="login" resultType="User">
+        select * from  users where name=#{param1} and password=#{param2};
+    </select>
+
+    <select id="login2" resultType="User">
+        select * from  users where name=#{user_name} and password=#{user_password};
+    </select>
 </mapper>
