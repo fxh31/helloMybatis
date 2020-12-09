@@ -13,7 +13,7 @@
     </select>
 
     <insert id="save" parameterType="User">
-        insert into users(name,password) value(#{name},#{password});
+        insert into users(name,password) values(#{name},#{password});
     </insert>
 
     <delete id="deleteById">
