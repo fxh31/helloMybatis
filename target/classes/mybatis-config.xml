@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.fxh.pojo"/>
+    </typeAliases>
+    <environments default="test">
+        <environment id="test">
+            <transactionManager type="jdbc"></transactionManager>
+            <dataSource type="pooled">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/testshixun1"/>
+                <property name="username" value="root"/>
+                <property name="password" value="159638"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"></mapper>
+    </mappers>
+</configuration>
